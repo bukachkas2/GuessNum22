@@ -52,9 +52,9 @@ public class GuessNum {
             if (!userWin) {
                 System.out.printf("You lost! My number was %d\n", myNum);
             }
-            System.out.println("Do you want to play again? (Y/n) ");
 
-        } while (askYesOrNo("do you want play again"));
+
+        } while (askYesOrNo("do you want to play again?"));
         System.out.println("Good bye " + name);
 
 
@@ -101,18 +101,26 @@ public class GuessNum {
     }
 
 
-    public static boolean askYesOrNo(boolean msg) {
+    public static boolean askYesOrNo(String msg) {
+        while(true) {
+            System.out.println("want to play game?yes/no");
+
 
 
         String answer = scanner.next ();
         
-        if (answer.equals("no")){
+        if (answer.equals("yes")){
             return true;
-        }else if (answer.equals ("yes")){
+
+        }else if (answer.equals ("no")){
             return false;
+
+
         }
 
 
+
+    }
     }
     }
 
